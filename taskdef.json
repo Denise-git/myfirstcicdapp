@@ -1,6 +1,4 @@
 {
-    "taskDefinition": {
-        "taskDefinitionArn": "arn:aws:ecs:eu-central-1:339712832438:task-definition/CdkEcsStackEcsTaskDefinitionFA0AA540:9",
         "containerDefinitions": [
             {
                 "name": "NginxContainer",
@@ -63,7 +61,6 @@
         "networkMode": "awsvpc",
         "revision": 9,
         "volumes": [],
-        "status": "ACTIVE",
         "requiresAttributes": [
             {
                 "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
@@ -105,9 +102,6 @@
         ],
         "requiresCompatibilities": [
             "EC2"
-        ],
-        "registeredAt": "2025-10-06T10:35:06.850000+02:00",
-        "registeredBy": "arn:aws:sts::339712832438:assumed-role/cdk-hnb659fds-cfn-exec-role-339712832438-eu-central-1/AWSCloudFormation"
-    },
-    "tags": []
-}
+        ]
+    }
+
