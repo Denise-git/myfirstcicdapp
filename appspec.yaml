@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: arn:aws:ecs:eu-central-1:339712832438:task-definition/CdkEcsStackEcsTaskDefinitionFA0AA540:9
+        LoadBalancerInfo:
+          ContainerName: NginxContainer
+          ContainerPort: 80
