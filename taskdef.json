@@ -1,0 +1,113 @@
+{
+    "taskDefinition": {
+        "taskDefinitionArn": "arn:aws:ecs:eu-central-1:339712832438:task-definition/CdkEcsStackEcsTaskDefinitionFA0AA540:9",
+        "containerDefinitions": [
+            {
+                "name": "NginxContainer",
+                "image": "339712832438.dkr.ecr.eu-central-1.amazonaws.com/my-ecr-repo:latest",
+                "cpu": 256,
+                "memory": 256,
+                "links": [],
+                "portMappings": [
+                    {
+                        "containerPort": 80,
+                        "hostPort": 80,
+                        "protocol": "tcp"
+                    }
+                ],
+                "essential": true,
+                "entryPoint": [],
+                "command": [],
+                "environment": [
+                    {
+                        "name": "AWS_REGION",
+                        "value": "eu-central-1"
+                    }
+                ],
+                "environmentFiles": [],
+                "mountPoints": [],
+                "volumesFrom": [],
+                "secrets": [],
+                "dnsServers": [],
+                "dnsSearchDomains": [],
+                "extraHosts": [],
+                "dockerSecurityOptions": [],
+                "dockerLabels": {},
+                "ulimits": [],
+                "logConfiguration": {
+                    "logDriver": "awslogs",
+                    "options": {
+                        "awslogs-group": "CdkEcsStack-EcsTaskDefinitionNginxContainerLogGroup85DD33FE-n7LZsQrbweth",
+                        "awslogs-region": "eu-central-1",
+                        "awslogs-stream-prefix": "nginx"
+                    },
+                    "secretOptions": []
+                },
+                "healthCheck": {
+                    "command": [
+                        "CMD-SHELL",
+                        "curl -f http://localhost/ || exit 1"
+                    ],
+                    "interval": 30,
+                    "timeout": 5,
+                    "retries": 3,
+                    "startPeriod": 10
+                },
+                "systemControls": [],
+                "credentialSpecs": []
+            }
+        ],
+        "family": "CdkEcsStackEcsTaskDefinitionFA0AA540",
+        "taskRoleArn": "arn:aws:iam::339712832438:role/CdkEcsStack-EcsTaskRole8DFA0181-vFXm2LpQQu1N",
+        "executionRoleArn": "arn:aws:iam::339712832438:role/CdkEcsStack-EcsTaskDefinitionExecutionRoleBE450C73-MQsZKdt6vSxC",
+        "networkMode": "awsvpc",
+        "revision": 9,
+        "volumes": [],
+        "status": "ACTIVE",
+        "requiresAttributes": [
+            {
+                "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+            },
+            {
+                "name": "ecs.capability.execution-role-awslogs"
+            },
+            {
+                "name": "com.amazonaws.ecs.capability.ecr-auth"
+            },
+            {
+                "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+            },
+            {
+                "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+            },
+            {
+                "name": "com.amazonaws.ecs.capability.task-iam-role"
+            },
+            {
+                "name": "ecs.capability.container-health-check"
+            },
+            {
+                "name": "ecs.capability.execution-role-ecr-pull"
+            },
+            {
+                "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+            },
+            {
+                "name": "ecs.capability.task-eni"
+            },
+            {
+                "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+            }
+        ],
+        "placementConstraints": [],
+        "compatibilities": [
+            "EC2"
+        ],
+        "requiresCompatibilities": [
+            "EC2"
+        ],
+        "registeredAt": "2025-10-06T10:35:06.850000+02:00",
+        "registeredBy": "arn:aws:sts::339712832438:assumed-role/cdk-hnb659fds-cfn-exec-role-339712832438-eu-central-1/AWSCloudFormation"
+    },
+    "tags": []
+}
